@@ -11,12 +11,15 @@ import Cocoa
 class ViewController: NSViewController {
 
     @IBOutlet weak var popUpButton: NSPopUpButton!
-    var category = Category(title: <#T##String#>, frameworks: <#T##[Frameworks]#>)
-    fileprivate var frameworks = ["Core NFC", "Ehimwenma", "Oshioke", "Tester"]
+    
+    @IBOutlet weak var tableView: NSTableView!
+    //var category = Category(title: <#T##String#>, frameworks: <#T##[Frameworks]#>)
+    fileprivate var frameworks = ["Core Animation", "Ehimwenma", "Oshioke", "Tester"]
     override func viewDidLoad() {
         super.viewDidLoad()
         popUpButton.addItems(withTitles: frameworks)
-        
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
 
@@ -27,5 +30,33 @@ class ViewController: NSViewController {
     }
 
 
+}
+
+extension ViewController : NSTableViewDelegate, NSTableViewDataSource{
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return 30
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        var identifier : NSUserInterfaceItemIdentifier
+        var text : String = ""
+        
+        if tableColumn == tableView.tableColumns[0]{
+            identifier = NSUserInterfaceItemIdentifier(rawValue: "frameworkCell")
+            text = "Core Animation"
+        } else{
+            identifier = NSUserInterfaceItemIdentifier(rawValue: "dateCell")
+            text = "21/04/2019"
+        }
+        let cell = tableView.makeView(withIdentifier: identifier, owner: nil) as! NSTableCellView
+        cell.textField?.stringValue = text
+        return cell
+    }
+    
+//    fileprivate enum CellIdentifiers : NSUserInterfaceItemIdentifier{
+//        typealias RawValue = String
+//
+//        static let frameworkID = "FrameworkCellID"
+//    }
 }
 
