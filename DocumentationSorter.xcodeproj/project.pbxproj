@@ -14,6 +14,7 @@
 		34F78C46226770B9006132AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34F78C45226770B9006132AF /* Assets.xcassets */; };
 		34F78C49226770B9006132AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F78C47226770B9006132AF /* Main.storyboard */; };
 		34F88748226C957F002FB2E8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F88747226C957F002FB2E8 /* Category.swift */; };
+		34F8AAE7226F0C6600A72BBB /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F8AAE6226F0C6600A72BBB /* FileReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		34F78C4A226770B9006132AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34F78C4B226770B9006132AF /* DocumentationSorter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DocumentationSorter.entitlements; sourceTree = "<group>"; };
 		34F88747226C957F002FB2E8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		34F8AAE6226F0C6600A72BBB /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				34F78C42226770B7006132AF /* DocumentationSorter.xcdatamodeld */,
 				34F88747226C957F002FB2E8 /* Category.swift */,
 				341DDE82226E866D0084E511 /* Documentation.json */,
+				34F8AAE6226F0C6600A72BBB /* FileReader.swift */,
 			);
 			path = DocumentationSorter;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F78C41226770B7006132AF /* ViewController.swift in Sources */,
+				34F8AAE7226F0C6600A72BBB /* FileReader.swift in Sources */,
 				34F78C3F226770B7006132AF /* AppDelegate.swift in Sources */,
 				34F78C44226770B7006132AF /* DocumentationSorter.xcdatamodeld in Sources */,
 				34F88748226C957F002FB2E8 /* Category.swift in Sources */,

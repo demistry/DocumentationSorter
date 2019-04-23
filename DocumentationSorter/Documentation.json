@@ -351,40 +351,245 @@
     "category": {
         "title": "Web",
         "frameworks": [{
-            "title": ""
-        }]
+            "title": "App Store Connect API"
+        },
+        {
+            "title": "Apple Music API"
+        },
+        {
+            "title": "Apple Pay on the Web"
+        },
+        {
+            "title": "CloudKit JS"
+        },
+        {
+            "title": "LivePhotosKit JS"
+        },
+        {
+            "title": "MapKit JS"
+        },
+        {
+            "title": "MusicKit JS"
+        },
+        {
+            "title": "Safari Extensions JS"
+        },
+        {
+            "title": "WebKit JS"
+        }
+        ]
     }
 },
 {
     "category": {
-        "title": "",
+        "title": "Developer Tools",
         "frameworks": [{
-            "title": ""
-        }]
+            "title": "Automator"
+        },
+        {
+            "title": "Code Diagnostics"
+        },
+        {
+            "title": "InstallerJS"
+        },
+        {
+            "title": "Playground Support"
+        },
+        {
+            "title": "PlaygroundBluetooth"
+        },
+        {
+            "title": "ScriptingRidge"
+        },
+        {
+            "title": "Swift Playgrounds"
+        },
+        {
+            "title": "XcodeKit"
+        },
+        {
+            "title": "XCTest"
+        }
+        ]
     }
 },
 {
     "category": {
-        "title": "",
+        "title": "System",
         "frameworks": [{
-            "title": ""
-        }]
+            "title": "Accelerate"
+        },
+        {
+            "title": "AuthenticationServices"
+        },
+        {
+            "title": "CFNetwork"
+        },
+        {
+            "title": "Collaboration"
+        },
+        {
+            "title": "Compression"
+        },
+        {
+            "title": "Core Bluetooth"
+        },
+        {
+            "title": "Core NFC"
+        },
+        {
+            "title": "Core Services"
+        },
+        {
+            "title": "Core Telephony"
+        },
+        {
+            "title": "Core WLAN"
+        },
+        {
+            "title": "CryptoTokenKit"
+        },
+        {
+            "title": "DarwinNotify"
+        },
+        {
+            "title": "DiskArbitration"
+        },
+        {
+            "title": "Dispatch"
+        },
+        {
+            "title": "dnssd"
+        },
+        {
+            "title": "ExceptionHandling"
+        },
+        {
+            "title": "ExternalAccessory"
+        },
+        {
+            "title": "FinderSync"
+        },
+        {
+            "title": "ForceFeedback"
+        },
+        {
+            "title": "FWAUserLib"
+        },
+        {
+            "title": "GSS"
+        },
+        {
+            "title": "HyperVisor"
+        },
+        {
+            "title": "InputMethodKit"
+        },
+        {
+            "title": "IOBluetooth"
+        },
+        {
+            "title": "IOBluetoothUI"
+        },
+        {
+            "title": "IOKit"
+        },
+        {
+            "title": "IOKitSurface"
+        },
+        {
+            "title": "Kernel"
+        },
+        {
+            "title": "LatentSemanticMapping"
+        },
+        {
+            "title": "LocalAuthentication"
+        },
+        {
+            "title" : "MobileCoreServices"
+        },
+        {
+            "title" : "Network"
+        },
+        {
+            "title" : "NetworkExtension"
+        },
+        {
+            "title" : "Objective-C Runtime"
+        },
+        {
+            "title" : "OpenDirectory"
+        },
+        {
+            "title" : "os"
+        },
+        {
+            "title" : "Security"
+        },
+        {
+            "title" : "SecurityFoundation"
+        },
+        {
+            "title" : "SecurityInterface"
+        },
+        {
+            "title" : "ServiceManagement"
+        },
+        {
+            "title" : "simd"
+        },
+        {
+            "title" : "SystemConfiguration"
+        },
+        {
+            "title" : "vmnet"
+        },
+        {
+            "title" : "XPC"
+        }
+        
+        
+        ]
     }
 },
 {
     "category": {
-        "title": "",
+        "title": "Release Notes",
         "frameworks": [{
-            "title": ""
-        }]
+            "title": "iOS Release Notes"
+        },
+        {
+            "title" : "macOS Release Notes"
+        },
+        {
+            "title" : "Safari Release Notes"
+        },
+        {
+            "title" : "tvOS Release Notes"
+        },
+        {
+            "title" : "watchOS Release Notes"
+        },
+        {
+            "title" : "Xcode Release Notes"
+        }
+        ]
     }
 },
 {
     "category": {
-        "title": "",
+        "title": "Resources",
         "frameworks": [{
-            "title": ""
-        }]
+            "title": "Human Interface Guidelines"
+        },
+        {
+            "title" : "Documentation Archive"
+        },
+        {
+            "title" : "Videos"
+        }
+        ]
     }
 }
 ]
