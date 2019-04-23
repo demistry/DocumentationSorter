@@ -12,5 +12,5 @@ import Foundation
 struct SelectedFrameworkObject{
     var categoryTitle : String
     var frameworkTitle : String
-    var dateOfSelection : Date
+    var dateOfSelection : String
 }

@@ -30,18 +30,21 @@ class ViewController: NSViewController {
             frameworkPopUpButton.addItems(withTitles: frameworkStringArray)
         }
     }
-    //fileprivate var frameworks = []
+    
+    internal var savedFrameworks : [SelectedFrameworkObject] = []{
+        didSet{
+            tableView.reloadData()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //popUpButton.addItems(withTitles: frameworks)
         tableView.delegate = self
         tableView.dataSource = self
         
         FileReader.readJSON { (categories) in
             self.categories = categories
         }
-        
-        // Do any additional setup after loading the view.
+        fetchDataFromCoreData()
     }
 
     @IBAction func categorySelected(_ sender: NSPopUpButton) {
@@ -87,8 +90,21 @@ class ViewController: NSViewController {
     }
     
     @IBAction func selectFrameworkAndSaveData(_ sender: NSButton) {
+        let selectedFrameworkObject = SelectedFrameworkObject(categoryTitle: categoryPopUpButton.titleOfSelectedItem!, frameworkTitle: frameworkPopUpButton.titleOfSelectedItem!, dateOfSelection: convertDateToString(date: Date()))
+        CoreDataUtil.saveToCoreData(selectedFrameworkObject: selectedFrameworkObject)
+        fetchDataFromCoreData()
     }
     
+    fileprivate func fetchDataFromCoreData(){
+        CoreDataUtil.readFromCoreData { (result) in
+            switch result{
+            case .success(let selectedFrameworks):
+                self.savedFrameworks = selectedFrameworks
+            case .failure(let error):
+                print("Error encountered is \(error)")
+            }
+        }
+    }
 }
 
 

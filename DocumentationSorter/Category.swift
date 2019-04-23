@@ -12,14 +12,14 @@ import Foundation
 struct Category : Codable{
     var title : String
     var frameworks : [Frameworks]
-    
-    func getCategory(title : String)->Category?{
-        if title.elementsEqual(self.title){
-            return self
-        } else{
-            return nil
-        }
-    }
+//    
+//    func getCategory(title : String)->Category?{
+//        if title.elementsEqual(self.title){
+//            return self
+//        } else{
+//            return nil
+//        }
+//    }
 }
 
 struct Frameworks : Codable{
