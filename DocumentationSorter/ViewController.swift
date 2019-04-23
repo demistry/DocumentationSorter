@@ -12,9 +12,10 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var frameworkPopUpButton: NSPopUpButton!
     @IBOutlet weak var categoryPopUpButton: NSPopUpButton!
-    
     @IBOutlet weak var tableView: NSTableView!
-    //var category = Category(title: <#T##String#>, frameworks: <#T##[Frameworks]#>)
+    
+    fileprivate var categoryShuffler : Int!
+    fileprivate var frameworkShuffler : Int!
     fileprivate var categories : [Category] = []{
         didSet{
             var categoryStringArray : [String] = []
@@ -38,16 +39,9 @@ class ViewController: NSViewController {
         
         FileReader.readJSON { (categories) in
             self.categories = categories
-            self.tableView.reloadData()
         }
         
         // Do any additional setup after loading the view.
-    }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
     }
 
     @IBAction func categorySelected(_ sender: NSPopUpButton) {
@@ -63,35 +57,38 @@ class ViewController: NSViewController {
         for framework in selectedFrameworks{
             frameworkStrings.append(framework.title)
         }
+        frameworkPopUpButton.removeAllItems()
+        frameworkPopUpButton.addItems(withTitles: frameworkStrings)
+    }
+    @IBAction func shuffleCategoryAndFramework(_ sender: NSButton) {
+        categoryShuffler = Int(arc4random_uniform(UInt32(categories.count)))
+        
+        print("Category shuffler picks \(categoryShuffler!)")
+        
+        categoryPopUpButton.selectItem(at: categoryShuffler)
+        let titleSelected = categoryPopUpButton.titleOfSelectedItem
+        var frameworkStrings : [String] = []
+        var selectedFrameworks : [Frameworks] = []
+        for category in categories{
+            if category.title.elementsEqual(titleSelected!){
+                selectedFrameworks = category.frameworks
+            }
+        }
+        
+        for framework in selectedFrameworks{
+            frameworkStrings.append(framework.title)
+        }
         
         frameworkPopUpButton.removeAllItems()
         frameworkPopUpButton.addItems(withTitles: frameworkStrings)
-        
-        
+        frameworkShuffler = Int(arc4random_uniform(UInt32(selectedFrameworks.count)))
+        print("Framework shuffler picks \(frameworkShuffler!)")
+        frameworkPopUpButton.selectItem(at: frameworkShuffler)
+    }
+    
+    @IBAction func selectFrameworkAndSaveData(_ sender: NSButton) {
     }
     
 }
 
-extension ViewController : NSTableViewDelegate, NSTableViewDataSource{
-    func numberOfRows(in tableView: NSTableView) -> Int {
-        return 30
-    }
-    
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        var identifier : NSUserInterfaceItemIdentifier
-        var text : String = ""
-        
-        if tableColumn == tableView.tableColumns[0]{
-            identifier = NSUserInterfaceItemIdentifier(rawValue: "frameworkCell")
-            text = "Core Animation"
-        } else{
-            identifier = NSUserInterfaceItemIdentifier(rawValue: "dateCell")
-            text = "21/04/2019"
-        }
-        let cell = tableView.makeView(withIdentifier: identifier, owner: nil) as! NSTableCellView
-        cell.textField?.stringValue = text
-        return cell
-    }
-    
-}
 

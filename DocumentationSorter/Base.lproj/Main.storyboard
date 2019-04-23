@@ -748,6 +748,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="shuffleCategoryAndFramework:" target="XfG-lQ-9wD" id="93O-dh-KJf"/>
+                                </connections>
                             </button>
                             <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="SRi-pk-P8u">
                                 <rect key="frame" x="343" y="5" width="5" height="265"/>
@@ -761,6 +764,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectFrameworkAndSaveData:" target="XfG-lQ-9wD" id="zCn-gO-iYw"/>
+                                </connections>
                             </button>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1J-kI-0Fa">
                                 <rect key="frame" x="346" y="0.0" width="203" height="240"/>
