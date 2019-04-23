@@ -53,10 +53,5 @@ extension ViewController : NSTableViewDelegate, NSTableViewDataSource{
         return cell
     }
     
-//    fileprivate enum CellIdentifiers : NSUserInterfaceItemIdentifier{
-//        typealias RawValue = String
-//
-//        static let frameworkID = "FrameworkCellID"
-//    }
 }
 

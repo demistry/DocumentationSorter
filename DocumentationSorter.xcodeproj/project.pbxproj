@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		341DDE83226E866D0084E511 /* Documentation.json in Resources */ = {isa = PBXBuildFile; fileRef = 341DDE82226E866D0084E511 /* Documentation.json */; };
 		34F78C3F226770B7006132AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F78C3E226770B7006132AF /* AppDelegate.swift */; };
 		34F78C41226770B7006132AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F78C40226770B7006132AF /* ViewController.swift */; };
 		34F78C44226770B7006132AF /* DocumentationSorter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34F78C42226770B7006132AF /* DocumentationSorter.xcdatamodeld */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		341DDE82226E866D0084E511 /* Documentation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Documentation.json; sourceTree = "<group>"; };
 		34F78C3B226770B7006132AF /* DocumentationSorter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocumentationSorter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F78C3E226770B7006132AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34F78C40226770B7006132AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				34F78C4B226770B9006132AF /* DocumentationSorter.entitlements */,
 				34F78C42226770B7006132AF /* DocumentationSorter.xcdatamodeld */,
 				34F88747226C957F002FB2E8 /* Category.swift */,
+				341DDE82226E866D0084E511 /* Documentation.json */,
 			);
 			path = DocumentationSorter;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F78C46226770B9006132AF /* Assets.xcassets in Resources */,
+				341DDE83226E866D0084E511 /* Documentation.json in Resources */,
 				34F78C49226770B9006132AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,390 @@
+[{
+    "category": {
+        "title": "App Frameworks",
+        "frameworks": [{
+            "title": "AppKit"
+        },
+        {
+            "title": "Bundle Resources"
+        },
+        {
+            "title": "Foundation"
+        },
+        {
+            "title": "Swift"
+        },
+        {
+            "title": "TVML"
+        },
+        {
+            "title": "TVMLKit"
+        },
+        {
+            "title": "TVMLKit JS"
+        },
+        {
+            "title": "TVUIKit"
+        },
+        {
+            "title": "UIKit"
+        },
+        {
+            "title": "WatchKit"
+        }
+        ]
+    }
+},
+{
+    "category": {
+        "title": "Graphics and Games",
+        "frameworks": [{
+            "title": "AGL"
+        },
+        {
+            "title": "ARKit"
+        },
+        {
+            "title": "ColorSync"
+        },
+        {
+            "title": "Core Animation"
+        },
+        {
+            "title": "Core Graphics"
+        },
+        {
+            "title": "Core Image"
+        },
+        {
+            "title": "Game Controller"
+        },
+        {
+            "title": "GameKit"
+        },
+        {
+            "title": "GameplayKit"
+        },
+        {
+            "title": "GLKit"
+        },
+        {
+            "title": "Image I/O"
+        },
+        {
+            "title": "Metal"
+        },
+        {
+            "title": "Metal Performance Shaders"
+        },
+        {
+            "title": "MetalKit"
+        },
+        {
+            "title": "Model I/O"
+        },
+        {
+            "title": "OpenGL ES"
+        },
+        {
+            "title": "PDFKit"
+        },
+        {
+            "title": "Quartz"
+        },
+        {
+            "title": "ReplayKit"
+        },
+        {
+            "title": "SceneKit"
+        },
+        {
+            "title": "SpriteKit"
+        },
+        {
+            "title": "Vision"
+        }
+        ]
+    }
+},
+{
+    "category": {
+        "title": "App Services",
+        "frameworks": [{
+            "title": "Accounts"
+        },
+        {
+            "title": "AddressBook"
+        },
+        {
+            "title": "AddressBookUI"
+        },
+        {
+            "title": "AdSupport"
+        },
+        {
+            "title": "ApplicationServices"
+        },
+        {
+            "title": "Business Chat"
+        },
+        {
+            "title": "Business Chat REST API"
+        },
+        {
+            "title": "CallKit"
+        },
+        {
+            "title": "CarPlay"
+        },
+        {
+            "title": "ClassKit"
+        },
+        {
+            "title": "ClockKit"
+        },
+        {
+            "title": "CloudKit"
+        },
+        {
+            "title": "Contacts"
+        },
+        {
+            "title": "ContactsUI"
+        },
+        {
+            "title": "Core Data"
+        },
+        {
+            "title": "Core Foundation"
+        },
+        {
+            "title": "Core Location"
+        },
+        {
+            "title": "Core ML"
+        },
+        {
+            "title": "Core Motion"
+        },
+        {
+            "title": "Core Spotlight"
+        },
+        {
+            "title": "Core Text"
+        },
+        {
+            "title": "Create ML"
+        },
+        {
+            "title": "Device Check"
+        },
+        {
+            "title": "EventKit"
+        },
+        {
+            "title": "EventKitUI"
+        },
+        {
+            "title": "FileProvider"
+        },
+        {
+            "title": "FileProviderUI"
+        },
+        {
+            "title": "HealthKit"
+        },
+        {
+            "title": "HomeKit"
+        },
+        {
+            "title": "iAd"
+        },
+        {
+            "title": "JavaScriptCore"
+        },
+        {
+            "title": "MapKit"
+        },
+        {
+            "title": "Messages"
+        },
+        {
+            "title": "MessageUI"
+        },
+        {
+            "title": "MultipeerConnectivity"
+        },
+        {
+            "title": "Natural Language"
+        },
+        {
+            "title": "NewsstandKit"
+        },
+        {
+            "title": "NotificationCenter"
+        },
+        {
+            "title": "PassKit"
+        },
+        {
+            "title": "PreferencePanes"
+        },
+        {
+            "title": "PushKit"
+        },
+        {
+            "title": "QuickLook"
+        },
+        {
+            "title": "SafariServices"
+        },
+        {
+            "title": "SiriKit"
+        },
+        {
+            "title": "SMS and Call Reporting"
+        },
+        {
+            "title": "Social"
+        },
+        {
+            "title": "Speech"
+        },
+        {
+            "title": "StoreKit"
+        },
+        {
+            "title": "TVServices"
+        },
+        {
+            "title": "UserNotifications"
+        },
+        {
+            "title": "UserNotificationsUI"
+        },
+        {
+            "title": "WatchConnectivity"
+        },
+        {
+            "title": "WebKit"
+        }
+        ]
+    }
+},
+{
+    "category": {
+        "title": "Media",
+        "frameworks": [{
+            "title": "Apple News"
+        },
+        {
+            "title": "AssetsLibrary"
+        },
+        {
+            "title": "AudioToolbox"
+        },
+        {
+            "title": "AudioUnit"
+            
+        },
+        {
+            "title": "AVFoundation"
+        },
+        {
+            "title": "AVKit"
+        },
+        {
+            "title": "Core Audio"
+            
+        },
+        {
+            "title": "Core Audio Kit"
+        },
+        {
+            "title": "Core Media"
+        },
+        {
+            "title": "Core MIDI"
+            
+        },
+        {
+            "title": "Core Video"
+        },
+        {
+            "title": "FXPlug"
+        },
+        {
+            "title": "HTTP Live Streaming"
+        },
+        {
+            "title": "iTunesLibrary"
+        },
+        {
+            "title": "MediaPlayer"
+        },
+        {
+            "title": "MediaAccessibility"
+        },
+        {
+            "title": "MediaLibrary"
+        },
+        {
+            "title": "PhotoKit"
+        },
+        {
+            "title": "Professional Video Applications"
+        },
+        {
+            "title": "QTKit"
+        },
+        {
+            "title": "ScreenSaver"
+        },
+        {
+            "title": "VideoToolbox"
+        }
+        
+        ]
+    }
+},
+{
+    "category": {
+        "title": "Web",
+        "frameworks": [{
+            "title": ""
+        }]
+    }
+},
+{
+    "category": {
+        "title": "",
+        "frameworks": [{
+            "title": ""
+        }]
+    }
+},
+{
+    "category": {
+        "title": "",
+        "frameworks": [{
+            "title": ""
+        }]
+    }
+},
+{
+    "category": {
+        "title": "",
+        "frameworks": [{
+            "title": ""
+        }]
+    }
+},
+{
+    "category": {
+        "title": "",
+        "frameworks": [{
+            "title": ""
+        }]
+    }
+}
+]
