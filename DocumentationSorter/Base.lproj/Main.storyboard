@@ -718,21 +718,18 @@
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hOp-5I-6EL">
-                                <rect key="frame" x="17" y="191" width="323" height="25"/>
+                                <rect key="frame" x="18" y="191" width="322" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="317" id="cwi-jM-t3o"/>
                                 </constraints>
-                                <popUpButtonCell key="cell" type="push" title="Graphics and Animation" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" pullsDown="YES" selectedItem="r3V-3o-eX1" id="jrS-1S-duw">
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="jrS-1S-duw">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="PsP-RJ-3aD">
-                                        <items>
-                                            <menuItem title="Graphics and Animation" state="on" hidden="YES" id="r3V-3o-eX1"/>
-                                            <menuItem title="Item 2" id="bRN-ld-m8f"/>
-                                            <menuItem title="Item 3" id="hCe-Ql-i5y"/>
-                                        </items>
-                                    </menu>
+                                    <menu key="menu" id="PsP-RJ-3aD"/>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="categorySelected:" target="XfG-lQ-9wD" id="mHe-We-b0t"/>
+                                </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="njO-zZ-10t">
                                 <rect key="frame" x="18" y="160" width="87" height="19"/>
@@ -875,11 +872,11 @@
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Nz-1v-iPw">
-                                <rect key="frame" x="17" y="128" width="322" height="25"/>
+                                <rect key="frame" x="18" y="128" width="321" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="316" id="R2X-yg-mN6"/>
                                 </constraints>
-                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" pullsDown="YES" id="8EX-PK-a7W">
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="8EX-PK-a7W">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="Lgk-h7-KL4"/>
@@ -914,7 +911,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="popUpButton" destination="2Nz-1v-iPw" id="F4b-nS-z5y"/>
+                        <outlet property="categoryPopUpButton" destination="hOp-5I-6EL" id="SuK-kz-eig"/>
+                        <outlet property="frameworkPopUpButton" destination="2Nz-1v-iPw" id="F4b-nS-z5y"/>
                         <outlet property="tableView" destination="twb-b6-av9" id="pLX-pt-sup"/>
                     </connections>
                 </viewController>
