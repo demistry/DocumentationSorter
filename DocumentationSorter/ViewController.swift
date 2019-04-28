@@ -16,15 +16,16 @@ class ViewController: NSViewController {
     
     fileprivate var categoryShuffler : Int!
     fileprivate var frameworkShuffler : Int!
-    fileprivate var categories : [Category] = []{
+    fileprivate var categories : [DocCategory] = []{
         didSet{
             var categoryStringArray : [String] = []
             var frameworkStringArray : [String] = []
             for category in categories{
                 categoryStringArray.append(category.title)
             }
-            for framework in categories[0].frameworks{
-                frameworkStringArray.append(framework.title)
+            for framework in categories[0].framework{
+                let frameworkCasted = framework as! DocFramework
+                frameworkStringArray.append(frameworkCasted.title)
             }
             categoryPopUpButton.addItems(withTitles: categoryStringArray)
             frameworkPopUpButton.addItems(withTitles: frameworkStringArray)
@@ -42,23 +43,35 @@ class ViewController: NSViewController {
         tableView.dataSource = self
         
         
-        
     }
     
     override func viewWillAppear() {
-        FileReader.readJSON { (categories) in
-            self.categories = categories
+//        FileReader.readJSON { (categories) in
+//            self.categories = categories
+//        }
+        //let loginFlag = UserDefaults.
+        
+        FileReader.retrieveCategoryInfo { (result) in
+            switch result{
+            case .success(let category):
+                self.categories = category
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
         fetchDataFromCoreData()
     }
 
     @IBAction func categorySelected(_ sender: NSPopUpButton) {
         let titleSelected = sender.titleOfSelectedItem
-        var selectedFrameworks : [Frameworks] = []
+        var selectedFrameworks : [DocFramework] = []
         var frameworkStrings : [String] = []
         for category in categories{
             if category.title.elementsEqual(titleSelected!){
-                selectedFrameworks = category.frameworks
+                for framework in category.framework{
+                    selectedFrameworks.append(framework as! DocFramework)
+                }
+                
             }
         }
         
@@ -76,10 +89,12 @@ class ViewController: NSViewController {
         categoryPopUpButton.selectItem(at: categoryShuffler)
         let titleSelected = categoryPopUpButton.titleOfSelectedItem
         var frameworkStrings : [String] = []
-        var selectedFrameworks : [Frameworks] = []
+        var selectedFrameworks : [DocFramework] = []
         for category in categories{
             if category.title.elementsEqual(titleSelected!){
-                selectedFrameworks = category.frameworks
+                for framework in category.framework{
+                    selectedFrameworks.append(framework as! DocFramework)
+                }
             }
         }
         

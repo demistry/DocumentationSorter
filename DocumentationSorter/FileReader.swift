@@ -11,6 +11,7 @@ import Cocoa
 
 class FileReader{
     typealias completionHandler = ([Category]) -> Void
+    typealias fetchCompletionHandler = (Result<[DocCategory], Error>) -> Void
     class func readJSON(completionHandler : @escaping completionHandler){
         guard let path = Bundle.main.path(forResource: "Documentation", ofType: "json") else{
             return
@@ -62,7 +63,23 @@ class FileReader{
         }
     }
     
-//    class func retrieveCategoryInfo()->[DocCategory]{
-//        
-//    }
+    class func retrieveCategoryInfo(fetchCompletionHandler : @escaping fetchCompletionHandler){
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<DocCategory>(entityName: "DocCategory")
+        
+        do{
+            let fetchResult = try managedContext.fetch(fetchRequest) //NSManagedObject
+//            for category in fetchResult{
+//                for framework in category.framework{
+//                    
+//                }
+//            }
+            fetchCompletionHandler(.success(fetchResult))
+            print("Fetch complete from core data")
+        } catch{
+            print("Could not fetch details due to error \(error.localizedDescription)")
+            fetchCompletionHandler(.failure(error))
+        }
+    }
 }

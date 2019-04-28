@@ -17,8 +17,8 @@ extension DocCategory {
         return NSFetchRequest<DocCategory>(entityName: "DocCategory")
     }
 
-    @NSManaged public var title: String?
-    @NSManaged public var framework: NSSet?
+    @NSManaged public var title: String
+    @NSManaged public var framework: NSSet
 
 }
 
