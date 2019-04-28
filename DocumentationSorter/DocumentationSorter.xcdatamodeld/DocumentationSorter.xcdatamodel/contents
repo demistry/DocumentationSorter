@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DocCategory" representedClassName="DocCategory" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="framework" toMany="YES" deletionRule="Nullify" destinationEntity="DocFramework" inverseName="category" inverseEntity="DocFramework" syncable="YES"/>
+    </entity>
+    <entity name="DocFramework" representedClassName="DocFramework" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DocCategory" inverseName="framework" inverseEntity="DocCategory" syncable="YES"/>
+    </entity>
     <entity name="SelectedFramework" representedClassName="SelectedFramework" syncable="YES" codeGenerationType="class">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateOfSelection" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="framework" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+        <element name="DocCategory" positionX="-54" positionY="18" width="128" height="75"/>
+        <element name="DocFramework" positionX="-54" positionY="18" width="128" height="75"/>
         <element name="SelectedFramework" positionX="-54" positionY="-9" width="128" height="90"/>
     </elements>
 </model>

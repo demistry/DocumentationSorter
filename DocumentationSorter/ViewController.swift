@@ -41,6 +41,11 @@ class ViewController: NSViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        
+        
+    }
+    
+    override func viewWillAppear() {
         FileReader.readJSON { (categories) in
             self.categories = categories
         }

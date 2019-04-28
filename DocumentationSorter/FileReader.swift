@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cocoa
 
 class FileReader{
     typealias completionHandler = ([Category]) -> Void
@@ -28,6 +29,40 @@ class FileReader{
         let jsonDecoder = JSONDecoder()
         let categories = try! jsonDecoder.decode([Category].self, from: data!)
         
+        saveCoreData(categories: categories)
         completionHandler(categories)
     }
+    
+    
+    fileprivate class func saveCoreData(categories : [Category]){
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "DocCategory", in: managedContext)!
+        let frameworkEntity = NSEntityDescription.entity(forEntityName: "DocFramework", in: managedContext)!
+        
+        for category in categories{
+            let docCategory = DocCategory(entity: entity, insertInto: managedContext)
+            //let docCategoryCreated = DocCategory(
+            docCategory.title = category.title
+            
+            for framework in category.frameworks{
+                let docFramework = DocFramework(entity: frameworkEntity, insertInto: managedContext)
+                docFramework.title = framework.title
+                docFramework.category = docCategory
+            }
+            
+        }
+        
+        do{
+            try managedContext.save()
+            UserDefaults.standard.set(true, forKey: "savedFlag")
+            print("Categories saved")
+        } catch{
+            print("Failed to save category objects to core data with error \(error.localizedDescription)")
+        }
+    }
+    
+//    class func retrieveCategoryInfo()->[DocCategory]{
+//        
+//    }
 }

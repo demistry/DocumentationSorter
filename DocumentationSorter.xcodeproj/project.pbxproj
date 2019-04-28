@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3409FE53227657C9001201CA /* DocCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409FE4F227657C9001201CA /* DocCategory+CoreDataClass.swift */; };
+		3409FE54227657C9001201CA /* DocCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409FE50227657C9001201CA /* DocCategory+CoreDataProperties.swift */; };
+		3409FE55227657C9001201CA /* DocFramework+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409FE51227657C9001201CA /* DocFramework+CoreDataClass.swift */; };
+		3409FE56227657C9001201CA /* DocFramework+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409FE52227657C9001201CA /* DocFramework+CoreDataProperties.swift */; };
 		341DDE83226E866D0084E511 /* Documentation.json in Resources */ = {isa = PBXBuildFile; fileRef = 341DDE82226E866D0084E511 /* Documentation.json */; };
 		3439E948226F368D00581B03 /* ExtensionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3439E947226F368D00581B03 /* ExtensionUtil.swift */; };
 		3439E94A226F3FD000581B03 /* SelectedFrameworkObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3439E949226F3FD000581B03 /* SelectedFrameworkObjects.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3409FE4F227657C9001201CA /* DocCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DocCategory+CoreDataClass.swift"; path = "DocumentationSorter/Core Data Models/DocCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3409FE50227657C9001201CA /* DocCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DocCategory+CoreDataProperties.swift"; path = "DocumentationSorter/Core Data Models/DocCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3409FE51227657C9001201CA /* DocFramework+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DocFramework+CoreDataClass.swift"; path = "DocumentationSorter/Core Data Models/DocFramework+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3409FE52227657C9001201CA /* DocFramework+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DocFramework+CoreDataProperties.swift"; path = "DocumentationSorter/Core Data Models/DocFramework+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		341DDE82226E866D0084E511 /* Documentation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Documentation.json; sourceTree = "<group>"; };
 		3439E947226F368D00581B03 /* ExtensionUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUtil.swift; sourceTree = "<group>"; };
 		3439E949226F3FD000581B03 /* SelectedFrameworkObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFrameworkObjects.swift; sourceTree = "<group>"; };
@@ -51,6 +59,10 @@
 		34F78C32226770B7006132AF = {
 			isa = PBXGroup;
 			children = (
+				3409FE4F227657C9001201CA /* DocCategory+CoreDataClass.swift */,
+				3409FE50227657C9001201CA /* DocCategory+CoreDataProperties.swift */,
+				3409FE51227657C9001201CA /* DocFramework+CoreDataClass.swift */,
+				3409FE52227657C9001201CA /* DocFramework+CoreDataProperties.swift */,
 				34F78C3D226770B7006132AF /* DocumentationSorter */,
 				34F78C3C226770B7006132AF /* Products */,
 			);
@@ -159,10 +171,14 @@
 				3439E948226F368D00581B03 /* ExtensionUtil.swift in Sources */,
 				34F8AAE7226F0C6600A72BBB /* FileReader.swift in Sources */,
 				3439E94A226F3FD000581B03 /* SelectedFrameworkObjects.swift in Sources */,
+				3409FE54227657C9001201CA /* DocCategory+CoreDataProperties.swift in Sources */,
 				34F78C3F226770B7006132AF /* AppDelegate.swift in Sources */,
 				34F78C44226770B7006132AF /* DocumentationSorter.xcdatamodeld in Sources */,
+				3409FE56227657C9001201CA /* DocFramework+CoreDataProperties.swift in Sources */,
 				3439E94C226F580800581B03 /* CoreDataUtil.swift in Sources */,
 				34F88748226C957F002FB2E8 /* Category.swift in Sources */,
+				3409FE53227657C9001201CA /* DocCategory+CoreDataClass.swift in Sources */,
+				3409FE55227657C9001201CA /* DocFramework+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
