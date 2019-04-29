@@ -47,15 +47,10 @@ class CoreDataUtil{
                 selectedFrameworkArray.append(selectedFrameworkObject)
             }
             fetchCompletionHandler(.success(selectedFrameworkArray))
-            print("Fetch complete from core data")
         } catch{
             print("Could not fetch details due to error \(error.localizedDescription)")
             fetchCompletionHandler(.failure(error))
         }
     }
     
-    
-    
-    
-     
 }

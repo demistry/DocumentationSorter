@@ -27,10 +27,13 @@ class ViewController: NSViewController {
                 let frameworkCasted = framework as! DocFramework
                 frameworkStringArray.append(frameworkCasted.title)
             }
+            let sortedFramework = frameworkStringArray.sorted { (string1, string2) -> Bool in
+                return string1 < string2
+            }
             categoryPopUpButton.removeAllItems()
             frameworkPopUpButton.removeAllItems()
             categoryPopUpButton.addItems(withTitles: categoryStringArray)
-            frameworkPopUpButton.addItems(withTitles: frameworkStringArray)
+            frameworkPopUpButton.addItems(withTitles: sortedFramework)
         }
     }
     
@@ -89,8 +92,11 @@ class ViewController: NSViewController {
         for framework in selectedFrameworks{
             frameworkStrings.append(framework.title)
         }
+        let sortedFramework = frameworkStrings.sorted { (string1, string2) -> Bool in
+            return string1 < string2
+        }
         frameworkPopUpButton.removeAllItems()
-        frameworkPopUpButton.addItems(withTitles: frameworkStrings)
+        frameworkPopUpButton.addItems(withTitles: sortedFramework)
     }
     @IBAction func shuffleCategoryAndFramework(_ sender: NSButton) {
         categoryShuffler = Int(arc4random_uniform(UInt32(categories.count)))
@@ -113,8 +119,12 @@ class ViewController: NSViewController {
             frameworkStrings.append(framework.title)
         }
         
+        let sortedFramework = frameworkStrings.sorted { (string1, string2) -> Bool in
+            return string1 < string2
+        }
+        
         frameworkPopUpButton.removeAllItems()
-        frameworkPopUpButton.addItems(withTitles: frameworkStrings)
+        frameworkPopUpButton.addItems(withTitles: sortedFramework)
         frameworkShuffler = Int(arc4random_uniform(UInt32(selectedFrameworks.count)))
         print("Framework shuffler picks \(frameworkShuffler!)")
         frameworkPopUpButton.selectItem(at: frameworkShuffler)
