@@ -27,6 +27,8 @@ class ViewController: NSViewController {
                 let frameworkCasted = framework as! DocFramework
                 frameworkStringArray.append(frameworkCasted.title)
             }
+            categoryPopUpButton.removeAllItems()
+            frameworkPopUpButton.removeAllItems()
             categoryPopUpButton.addItems(withTitles: categoryStringArray)
             frameworkPopUpButton.addItems(withTitles: frameworkStringArray)
         }
@@ -49,16 +51,25 @@ class ViewController: NSViewController {
 //        FileReader.readJSON { (categories) in
 //            self.categories = categories
 //        }
-        //let loginFlag = UserDefaults.
-        
-        FileReader.retrieveCategoryInfo { (result) in
-            switch result{
-            case .success(let category):
-                self.categories = category
-            case .failure(let error):
-                print(error.localizedDescription)
+        let loginFlag = UserDefaults.standard.bool(forKey: "savedFlag")
+        if loginFlag {
+            FileReader.retrieveCategoryInfo { (result) in
+                switch result{
+                case .success(let category):
+                    self.categories = category
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            print("Flag set")
+            
+        } else{
+            FileReader.readJSON { (category) in
+                
             }
         }
+        
+        
         fetchDataFromCoreData()
     }
 
@@ -83,7 +94,7 @@ class ViewController: NSViewController {
     }
     @IBAction func shuffleCategoryAndFramework(_ sender: NSButton) {
         categoryShuffler = Int(arc4random_uniform(UInt32(categories.count)))
-        
+        print("Categories count is \(categories.count)")
         print("Category shuffler picks \(categoryShuffler!)")
         
         categoryPopUpButton.selectItem(at: categoryShuffler)
@@ -113,6 +124,7 @@ class ViewController: NSViewController {
         let selectedFrameworkObject = SelectedFrameworkObject(categoryTitle: categoryPopUpButton.titleOfSelectedItem!, frameworkTitle: frameworkPopUpButton.titleOfSelectedItem!, dateOfSelection: convertDateToString(date: Date()))
         CoreDataUtil.saveToCoreData(selectedFrameworkObject: selectedFrameworkObject)
         fetchDataFromCoreData()
+        deleteData(titleSelected: categoryPopUpButton.titleOfSelectedItem!, frameworkTitleSelected: frameworkPopUpButton.titleOfSelectedItem!)
     }
     
     fileprivate func fetchDataFromCoreData(){
@@ -122,6 +134,21 @@ class ViewController: NSViewController {
                 self.savedFrameworks = selectedFrameworks
             case .failure(let error):
                 print("Error encountered is \(error)")
+            }
+        }
+    }
+    
+    fileprivate func deleteData(titleSelected : String, frameworkTitleSelected : String){
+    
+        for category in categories{
+            if category.title.elementsEqual(titleSelected){
+                for framework in category.framework{
+                    let castedFramework = framework as! DocFramework
+                    if castedFramework.title.elementsEqual(frameworkTitleSelected){
+                        print("Framework deleted")
+                        category.removeFromFramework(castedFramework)
+                    }
+                }
             }
         }
     }

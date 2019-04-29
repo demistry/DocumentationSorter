@@ -67,16 +67,13 @@ class FileReader{
         let appDelegate = NSApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<DocCategory>(entityName: "DocCategory")
-        
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
         do{
             let fetchResult = try managedContext.fetch(fetchRequest) //NSManagedObject
-//            for category in fetchResult{
-//                for framework in category.framework{
-//                    
-//                }
-//            }
+            print("Fetch complete from core data for category and framework")
             fetchCompletionHandler(.success(fetchResult))
-            print("Fetch complete from core data")
+            
         } catch{
             print("Could not fetch details due to error \(error.localizedDescription)")
             fetchCompletionHandler(.failure(error))

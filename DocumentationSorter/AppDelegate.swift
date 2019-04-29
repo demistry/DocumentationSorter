@@ -15,6 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+    
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -49,6 +50,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         })
         return container
     }()
+    
+    
+    
 
     // MARK: - Core Data Saving and Undo support
 
@@ -69,6 +73,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
+    
+//func resetCoreData() {
+//    let storeURL: URL = applicationDocumentsDirectory().appendingPathComponent("DocumentationSorter.sqlite")
+//    let fileManager = FileManager.default
+//    do {
+//        try fileManager.removeItem(at: storeURL)
+//        print("Whole core data removed")
+//    } catch {
+//    }
+//
+//    var error: Error? = nil
+//
+//    do {
+//        fileManager.fileExists(atPath: try String(contentsOf: storeURL, encoding: String.Encoding.ascii.rawValue))
+//
+//        if fileManager.fileExists(atPath: try String(contentsOf: storeURL, encoding: String.Encoding.ascii.rawValue)) {
+//            try fileManager.removeItem(at: storeURL)
+//        }
+//    } catch {
+//    }
+//
+//    managedObjectContext = nil
+//    persistentStoreCoordinator = nil
+//}
+
 
     func windowWillReturnUndoManager(window: NSWindow) -> UndoManager? {
         // Returns the NSUndoManager for the application. In this case, the manager returned is that of the managed object context for the application.

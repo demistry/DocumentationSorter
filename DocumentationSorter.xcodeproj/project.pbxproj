@@ -324,7 +324,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.demistry.DocumentationSorter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demistrye.DocumentationSorter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -343,7 +343,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.demistry.DocumentationSorter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demistrye.DocumentationSorter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
